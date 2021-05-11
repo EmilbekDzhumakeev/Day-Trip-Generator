@@ -6,36 +6,37 @@
     let transport = ["Ferry", "Car", "Train", "Bus","Horse"]; 
     let entertainment = ["Concert", "Movies", "Stand up comedy", "Theater", "Museum"];
  
-    myTrip = createTrip(destinations, restaurant , transport, entertainment);
+    myTrip = createTrip(destinations, restaurant, transport, entertainment);
 
-   let proceed = prompt("Would you like to continue with this trip? Y/N "+   printTrip(myTrip)); 
+   let proceed = prompt("Would you like to continue with this trip? Y/N " + myTrip); 
     printTrip(myTrip);
 
-   if (proceed !== "Y") {
+   while (proceed !== "Y") {
    let userInput= prompt("What would you like to change? Choose: 1,2,3 or 4");
 switch (userInput) {
     case "1":
-        myTrip.push[0]=random(destinations);
+        myTrip[0]=(random(destinations));
     break; 
     case "2":
-        myTrip.push[1]=random(restaurant);
+        myTrip[1]=(random(restaurant));
     break;  
     case "3":
-        myTrip.push[2]=random(transport)
+        myTrip[2]=(random(transport));
     break; 
     case "4":
-        myTrip.push[3]=random(entertainment);
+        myTrip[3]=(random(entertainment));
     break;
     default: 
     console.log("Wrong input entry! Try again !");
     break; 
-    proceed = prompt("Would you like to continue with this trip? Y/N ")  
-    printTrip(myTrip);
-} }  else  printTrip(myTrip);
+}
+proceed = prompt("Would you like to continue with this trip? Y/N "+ myTrip)    
+printTrip(myTrip);
+}  console.log("Congrats you confirmed your trip Plan");
 
 //////////////////////////////
 function random(item){
-    let i = Math.floor(Math.random() * 6); 
+    let i = Math.floor(Math.random() * 5); 
     return item[i];
   }  
   /////////////////////////// 
